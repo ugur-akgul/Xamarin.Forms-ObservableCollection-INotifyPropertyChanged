@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankApp.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="listView" ItemsSource="{Binding Items}" HasUnevenRows="True" ItemSelected="listView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="{Binding BgColor}">
+                            <Label Text="{Binding Name}"></Label>
+                            <Button Text="Tıkla" IsVisible="False"></Button>                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>            
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
